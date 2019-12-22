@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WORKS-POMAOLIO</title>
+    <link href="css/style.css" rel="stylesheet">    
+  </head>
+
+<body class="works__block">
+
+    <header class="header">
+        <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__item"><a class="header__link" href="index.html">HOME</a></li>
+                <li class="header__item"><a class="header__link" href="works.html">WORKS</a></li>
+  </ul>
+          </nav>
+    </header>
+
+
+  <div class="works__title-block">
+    <img class="works__title" id="works-off" src="img/works-off.png">                                  
+    <img class="works__title" id="works-on" src="img/works.png">
+  </div>
+
+        <ul class="works__img-block">
+
+              <li class="works__img"><a href="website_01.html"><img src="img/mockUp-komorebi.png" alt="架空の児童心療内科のサイト"></a></li>
+              <li class="works__img"><a href="website_02.html"><img src="img/mockUp-kurashi.png" alt="架空の電力会社のサイト"></a></li>
+              <li class="works__img"><a href="website_03.html"><img src="img/mockUp-yoga.png" alt="架空のヨガスタジオのサイト"></a></li>
+              <li class="works__img"><a href="website_04.html"><img src="img/mockUp-antique.png" alt="架空のアンティークカフェのサイト"></a></li>
+              <li class="works__img"><a href="banner_01.html"><img src="img/thumb-banner.png" alt="架空のバナー集"></a></li>
+              <li class="works__img"><a href="website_05.html"><img src="img/mockUp-cafe.png" alt="架空のカフェのサイト"></a></li>
+              <li class="works__img"><a href="website_06.html"><img src="img/mockUp-aojiru.png" alt="架空の青汁のランディングページ"></a></li>
+              <li class="works__img"><a href="research.html"><img src="img/thumb-car.png" alt="【分析】ターゲットの性別に合わせたデザイン"></a></li>
+              <li class="works__img"><a href="website_07.html"><img src="img/mockUp-pomaolio.png" alt="自身のポートフォリオサイト"></a></li>
+
+        </ul>
+
+        <footer class="works__footer footer">
+          <p class="copy">©Mao　Asano</small>
+        </footer>    
+
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>         
+<script>
+    //works点灯
+    $('#works-on').hide();
+    setTimeout(function() {
+            $('#works-on').fadeIn();
+            $('#works-off').hide();
+    }, 500);
+</script>
+
+</body>
+</html>
