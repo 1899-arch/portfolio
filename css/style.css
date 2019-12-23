@@ -13,6 +13,7 @@
 body{
   font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
   background-color: rgb(24, 24, 24);
+  min-width: 1330px;
 }
 
 a:focus{
@@ -34,7 +35,6 @@ a:focus{
 /*ホーム用*/
 .header__index{
       z-index: 15;
-      position: absolute;
       background-image: url("../img/header.png");
       background-repeat: no-repeat;
       width: 100%;
@@ -122,6 +122,8 @@ index
   background-repeat: no-repeat;
   padding-bottom: 80px;
   background-size: contain;
+  background-size: cover;
+  width: 100%;
 }
 
 .index__curtain{
