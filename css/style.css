@@ -32,6 +32,10 @@ a:focus{
   background-size: cover;
 }
 
+.header--sp{
+  display: none;
+}
+
 /*ホーム用*/
 .header__index{
       z-index: 15;
@@ -121,7 +125,6 @@ index
   background-image: url(../img/top-bg.png);
   background-repeat: no-repeat;
   padding-bottom: 80px;
-  background-size: contain;
   background-size: cover;
   width: 100%;
 }
@@ -167,19 +170,18 @@ index
   margin-top: -530px;
 }
 
-/*ホームのPolicy*/
-.index__policy-block{
-  height: 1000px;
-  background-image: url(../img/top-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 
 /*-----
 Policy
 -----*/
-.policy__block{
+
+.index__policy-block--sp{
+  display: none;
+}
+
+.index__policy-block{
+  height: 1000px;
   background-image: url(../img/top-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -222,10 +224,8 @@ Policy
 
 .policy__text-block{
   text-align: center;
-  margin-top: 230px;
   display: inline-block;
-  margin-left: 170px;
-  margin-right: 145px;
+  margin: 230px 145px 0 170px;
 }
 
 .policy__wrap--bem{
@@ -290,7 +290,6 @@ Policy
 
 
 /*index--Contact*/
-
 .index__hangs {
   z-index: 5;
   position: fixed;
@@ -330,7 +329,7 @@ Policy
 }
 
 .contact__btn:hover{
-  opacity: 40%;
+  opacity: 0.7;
 }
 
 /*-------トップに戻る-------*/
@@ -346,7 +345,7 @@ Policy
 }
 
 .index__return-block a:hover {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 /*画面グレー化*/
@@ -365,18 +364,13 @@ Policy
    top: 0; 
  }
 
- .index__bar--bottom{
-  margin-top: 48vw;
- }
-
  .loop_wrap{
   display: flex;
   width: 100vw;
   overflow: hidden;
 }
 
-.index__bar--top,
-.index__bar--bottom {
+.index__bar--top{
   width: auto;
   height: 100%;
 }
@@ -436,20 +430,20 @@ works
   margin: 0 200px; 
 }
 
-.works__img-block img{
+.works__img{
   border-radius: 50%;
   border: 3px #ccc solid;
 }
 
 
-.works__img{ 
+.works__item{ 
   display: inline-block;      
   padding:  20px;             
   height: 100px;       
   transition: 0.5s;
 }
 
-.works__img:hover{
+.works__item:hover{
   opacity: 0.5;
 }
 
@@ -457,10 +451,6 @@ works
 works詳細
 ----*/
 
-/*---全体設定---*/
-span{
-  font-weight: bold;
-}
 
 /*---画像が2枚のページ---*/
 .product__main-block{
@@ -469,6 +459,10 @@ span{
 
 .product__img-block{
   margin-top: 70px;
+}
+
+.product__img-block--sp{
+  display: none;
 }
 
 .product__img{
@@ -491,8 +485,6 @@ span{
 
 /*---画像が１枚のページ---*/
 .product__main-block--one{
-  margin: 0 350px;
-  margin-bottom: 200px;
   margin: 0 150px 200px 120px;
 }
 
@@ -513,8 +505,7 @@ span{
 
 .product__img--FV{
   float: left;
-  margin: 10px;
-  margin-right: 20px;
+  margin: 10px 20px 10px 10px;
 }
 
 .product__text-block--FV{
@@ -557,61 +548,351 @@ span{
   font-weight: bold;
 }
 
+/*---全体設定---*/
+span{
+  font-weight: bold;
+}
+
+
+
+@media screen and (max-width:479px){
+  
+  body{
+    font-size: 3.5vw;
+  }
+  h1{
+    font-size: 7.2vw;
+  }
+  h2{
+    font-size: 5vw;
+  }
+  
+  
+  body{
+    min-width: 370px;
+  }
+  
+  /*--------ヘッダ--------*/
+  
+  .header{
+    display: none;
+  }
+
+  .header--sp{
+  display: block;
+  z-index: 15;
+  background-image: url("../img/header.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100px;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  }
+
+
+  /*-----フッター-----*/
+.footer{
+  height: 80px;
+}
+
+
+.index__footer{
+  margin-top: -70px;
+}
+
+
+/*-------------
+index
+--------------*/
+
+/*index--トップ*/
+.index__top-block {
+  padding-bottom: 0px;
+  }
+
+  .index__top-text{
+    padding: 30vw 0 20vw;
+    margin-top: -70vw;
+  }
+  
+  .index__top-title{
+    font-size: 7.5vw;
+  }
+  
+  .index__top-subtitle{
+    font-size: 5.2vw;
+}
+
+/*index--About*/
+.index__about-light{
+  height: 270px;
+}
+  
+.index__about-block{
+  height: 270px;    
+}
+
+.index__about-text{
+  margin-top: -190px;
+}
+
+
 
 /*-----
-Contact
+Policy
 -----*/
-.contact__block{
-  background-image: url(../img/bg.png);
+
+.index__policy-block{
+  display: none;
+}
+.index__policy-block--sp{
+  display: block;
+  height: 550px;
+  background-image: url(../img/top-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-x: center;
 }
 
-.contact__text-block{
+
+/*ポリシー文字*/
+
+.policy__title{
   text-align: center;
-  margin-top: 100px;
-  padding-top: 150px;
+  font-size: 5vw;
+}
+.policy__text{
+  padding: 0px 20px;
+  text-align: center;
+  font-size: 4vw;
 }
 
-.contact__btn:hover{
-  opacity: 0.7;
+/*sp*/
+.index__policy-img{
+  width: 50%;
+  padding-left: 90px;
+}
+
+/*カルーセル*/
+.index__policy-carr-block {margin:20px 0vw;}
+.index__policy-carr-block .slick-next { right: -100px; z-index: 0; padding-right: 0px;}
+.index__policy-carr-block .slick-prev { left: -100px; z-index: 0; margin:0px;}
+
+
+/* index--works */
+
+.index__works-block{
+  padding: 70px;
+}
+
+.index__works-title{
+  float: none;
+  margin: 0 20px 15px -40px;
+  width: 300px;
+}
+
+/*カルーセル*/
+.index__works-img-block {margin:0 0 50px;}
+.index__works-img-block .slick-next { right: -50px; z-index: 0; padding-right: 0px;}
+.index__works-img-block .slick-prev { left: -50px; z-index: 0; margin:0px;}
+
+/*index--Contact*/
+
+.index__hangs {
+  top: 20px;
+}
+
+.index__star{
+  height: 240px;
+  margin: 0;
+}
+
+.index__contact-block{
+  height: 600px;
+}
+
+.index__contact-text-block{
+  padding-top: 130px;
 }
 
 .contact__title{
-  font-size: 50px;
+  padding-bottom: 20px;
 }
 
-/*降りてくる星*/
-.contact__star{
+.contact__btn{
+  width: 70%;
+}
+
+/*-------トップに戻る-------*/
+.index__return-block {
+  bottom: -10px; 
+  margin-left: 90%;
+}
+
+.index__return{
+  width: 150px;
+}
+
+.index__return-block a:hover {
+  opacity: 0.5;
+}
+
+/*-----
+works
+-----*/
+.works__title-block{
+  margin-top: 100px;
+}
+
+.works__title{
+  width: 300px;
+}
+
+.works__img-block{
+  margin: 0 0 30px; 
+}
+
+/*----
+works詳細
+----*/
+
+/*---画像が2枚のページ---*/
+.product__main-block{
+  margin: 0;
+}
+
+
+.product__img{
+  margin: 10px;
+}
+
+.product__img--sp{
+  margin-right: 70px;
+}
+
+
+
+.product__text-block--PF{
+  padding: 0px;
+}
+
+/*---画像が１枚のページ---*/
+.product__main-block--one{
+  margin: 0;
+}
+
+.product__img--one{
+  float: none;
+  margin: 0;
+}
+
+/*---FVのページ---*/
+.product__main-block--FV{
+  margin-bottom: 0px;
+}
+
+.product__img-block--FV{
+  margin-top: 0px;
+}
+
+.product__img--FV{
+  float: none;
+  margin: 0px;
+  width: 310px;
+}
+
+.product__text-block--FV{
+  padding: 0px;
+}
+
+/*---バナーのページ---*/
+
+.product__list--banner{
+  padding: 0 20px;
+}
+
+.product__main-block--banner{
+  margin: 0;
+}
+
+.product__text--banner{
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.product__item--banner{
   display: block;
-  z-index: 1;
-  margin-top: -700px;
-  position:absolute;
+  width: 300px;
+  height: auto;
+  margin-right: 0px;
 }
 
-.contact__hangs{
-  position:relative;
+/*---分析のページ---*/
+.product__main-block--research{
+  margin: 0px;
 }
 
-#star1{
-  padding-left: 5%;
-  margin-top: -300px;
-  width: 200px;
+.product__car-block{
+  display: block;
+  margin-top: 0px;
 }
-#star2{
-  padding-left: 20%;
-  margin-top: -200px;
-  width: 100px;
+
+.product__car--male{
+  padding-right: 0px;
 }
-#star3{
-  padding-left: 65%;
-  margin-top: -200px;
-  width: 170px;
+
+.product__car-cap{
+  margin-top: 20px;
 }
-#star4{
-  padding-left: 76%;
-  margin-top: -250px;
-  width: 140px;
+
+.product__figure--research{
+  width: 340px;
 }
 
 
+/*---全体設定---*/
+
+.product__title{
+  text-align: center;
+  font-size: 6vw;
+}
+
+.product__text{
+  margin-top: 20px;
+}
+
+.product__img-block,
+.product__img-block--FV{
+  display: none;
+}
+
+.product__img-block--sp{
+  display: block;
+  text-align: center;
+}
+
+.product__img--one,
+.product__img,
+.product__img--FV{
+  float: none;
+  margin: 10px;
+  width: 250px;
+}
+
+.product__text-block,
+.product__text-block--FV,
+.product__text-block--PF,
+.product__main-block--research,
+.product__main-block--banner,
+.product__text-block--sp{
+  padding: 0;
+  margin: 140px 20px 20px;
+}
+
+.product__img--car,
+.product__img--banner{
+  width: 300px;
+}
+
+}
