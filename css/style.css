@@ -479,10 +479,6 @@ works詳細
   padding: 60px 50px 50px 400px;
 }
 
-.product__text-block--PF{
-  padding: 250px 0px 50px 500px;
-}
-
 /*---画像が１枚のページ---*/
 .product__main-block--one{
   margin: 0 150px 200px 120px;
@@ -776,12 +772,6 @@ works詳細
   margin-right: 70px;
 }
 
-
-
-.product__text-block--PF{
-  padding: 0px;
-}
-
 /*---画像が１枚のページ---*/
 .product__main-block--one{
   margin: 0;
@@ -887,7 +877,6 @@ works詳細
 
 .product__text-block,
 .product__text-block--FV,
-.product__text-block--PF,
 .product__main-block--research,
 .product__main-block--banner,
 .product__text-block--sp{
