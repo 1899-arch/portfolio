@@ -467,7 +467,7 @@ works詳細
 
 .product__img{
   float: left;
-  margin: 10px;
+  margin: 10px 20px 10px 10px;
 }
 
 .product__img--sp{
@@ -553,7 +553,6 @@ works詳細
 span{
   font-weight: bold;
 }
-
 
 
 @media screen and (max-width:479px){
