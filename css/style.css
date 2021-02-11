@@ -550,7 +550,7 @@ works詳細
 }
 
 /*---全体設定---*/
-span{
+.product__text-bold{
   font-weight: bold;
 }
 
