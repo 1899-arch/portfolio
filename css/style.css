@@ -554,6 +554,10 @@ span{
   font-weight: bold;
 }
 
+.product__text-para{
+   margin-bottom: 20px;
+}
+
 
 @media screen and (max-width:479px){
   
